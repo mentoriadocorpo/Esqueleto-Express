@@ -1,0 +1,7 @@
+{
+    "watch": ["src", "public/css"],
+    "ext": "js,ejs,css",
+    "ignore": ["public/css/output.css"],
+    "exec": "node src/server.js"
+  }
+  

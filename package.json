@@ -1,0 +1,25 @@
+{
+  "name": "expressproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss public/css/styles.css -o public/css/output.css",
+    "start": "node src/server.js",
+    "dev:server": "nodemon",
+    "dev:css": "nodemon -w public/css -e css -x \"npm run build:css\"",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:css\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "ejs": "^3.1.6"
+  },
+  "devDependencies": {
+    "tailwindcss": "^2.2.19",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^8.3.1",
+    "autoprefixer": "^10.3.1",
+    "nodemon": "^2.0.12",
+    "concurrently": "^6.2.1"
+  }
+}
